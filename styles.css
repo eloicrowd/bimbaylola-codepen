@@ -1,0 +1,197 @@
+html {
+	text-align: center;
+	background: white;
+	box-sizing:border-box;
+}
+
+.info {
+	font-size: 20px;
+	font-family: arial;
+	font-weight: 900;
+	letter-spacing: .1em;
+}
+
+body {
+	padding-top: 80px;
+}
+
+.container {
+	width: 600px;
+	height: 600px;
+	position: relative;
+	perspective: 2000px;
+	margin: auto;
+}
+
+#cube {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+}
+
+.animate {
+	animation-name: spin;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+#cube figure {
+	margin: 0;
+	width: 596px;
+	height: 596px;
+	display: block;
+	position: absolute;
+	border: 2px solid white;
+	opacity: 1;
+	text-align: center;
+	line-height: 596px;
+	font-size: 100px;
+	font-weight: 900;
+	color: rgba(255, 255, 255, 1);
+}
+
+input[type="button"] {
+	background: none;
+	color: black;
+	font-size: 12px;
+	font-weight: 500;
+	border-radius: 6px;
+	border: none;
+	padding: 6px 20px;
+	margin: 15px 6px;
+}
+
+input[type="button"]:hover {
+	background: black;
+	color: white;
+}
+
+#cube .front {
+	/*background: red;*/
+	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/1.jpg");
+	transform: rotateY(0deg) translateZ(300px);
+}
+
+#cube .back {
+	/*background: green;*/
+		background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/3.jpg");
+	transform: rotateY(180deg) translateZ(300px);
+}
+
+#cube .right {
+	/*background: black;*/
+		background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/2.jpg");
+	transform: rotateY(90deg) translateZ(300px);
+}
+
+#cube .left,
+#cube.show-front-2 .left {
+	/*background: teal;*/
+	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/4.jpg");
+	transform: rotateY(-90deg) translateZ(300px);
+}
+
+#cube.show-front-2 .front,
+#cube.show-right-2 .front {
+	/*background: red;*/
+	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/5.jpg");
+}
+
+#cube.show-right-2 .right,
+#cube.show-back-2 .right {
+	/*background: red;*/
+	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/6.jpg");
+}
+
+#cube.show-back-2 .back,
+#cube.show-right-2 .back {
+	/*background: red;*/
+	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/7.jpg");
+}
+
+#cube {
+	transform: translateZ(-300px);
+}
+
+#cube.show-front {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) rotateY(0deg);
+}
+
+#cube.show-back {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) 		rotateY(-180deg);
+}
+
+#cube.show-right {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) rotateY(-90deg);
+}
+
+#cube.show-left {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) rotateY(-270deg);
+}
+
+#cube.show-front-2 {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) rotateY(-360deg);
+}
+
+#cube.show-back-2 {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) 		rotateY(-540deg);
+}
+
+#cube.show-right-2 {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) rotateY(-450deg);
+}
+
+/*#cube.show-left {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-100px) rotateY(90deg);
+}*/
+
+#cube.show-top {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) rotateX(-90deg);
+}
+
+#cube.show-bottom {
+	transition: transform 500ms ease-in-out;
+	transform: translateZ(-300px) rotateX(90deg);
+}
+/*
+@keyframes spin {
+	0% {
+		transition: transform 500ms ease-in-out;
+		transform: translateZ(-100px) rotateY(0deg);
+	}
+	16.66% {
+		transition: transform 500ms ease-in-out;
+		transform: translateZ(-100px) rotateX(-180deg);
+	}
+	33.337% {
+		transition: transform 500ms ease-in-out;
+		transform: translateZ(-100px) rotateY(-90deg);
+	}
+	50.007% {
+		transition: transform 500ms ease-in-out;
+		transform: translateZ(-100px) rotateY(90deg);
+	}
+	66.677% {
+		transition: transform 500ms ease-in-out;
+		transform: translateZ(-100px) rotateX(-90deg);
+	}
+	83.344% {
+		transition: transform 500ms ease-in-out;
+		transform: translateZ(-100px) rotateX(90deg);
+	}
+	100% {
+		transition: transform 500ms ease-in-out;
+		transform: translateZ(-100px) rotateY(0deg);
+	}
+}*/
