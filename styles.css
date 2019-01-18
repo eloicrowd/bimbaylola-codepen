@@ -74,45 +74,52 @@ input[type="button"]:hover {
 
 #cube .front {
 	/*background: red;*/
-	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/1.jpg");
+    background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/1.jpg");
+    background-size: cover;
 	transform: rotateY(0deg) translateZ(250px);
 }
 
 #cube .back {
 	/*background: green;*/
-		background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/3.jpg");
+    background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/3.jpg");
+    background-size: cover;
 	transform: rotateY(180deg) translateZ(250px);
 }
 
 #cube .right {
 	/*background: black;*/
-		background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/2.jpg");
+    background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/2.jpg");
+    background-size: cover;
 	transform: rotateY(90deg) translateZ(250px);
 }
 
 #cube .left,
 #cube.show-front-2 .left {
 	/*background: teal;*/
-	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/4.jpg");
+    background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/4.jpg");
+    background-size: cover;
 	transform: rotateY(-90deg) translateZ(250px);
 }
 
 #cube.show-front-2 .front,
 #cube.show-right-2 .front {
 	/*background: red;*/
-	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/5.jpg");
+    background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/5.jpg");
+    background-size: cover;
 }
 
 #cube.show-right-2 .right,
 #cube.show-back-2 .right {
 	/*background: red;*/
-	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/6.jpg");
+    background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/6.jpg");
+    background-size: cover;
 }
 
 #cube.show-back-2 .back,
 #cube.show-right-2 .back {
 	/*background: red;*/
-	background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/7.jpg");
+    background-image: url("https://s3-eu-west-1.amazonaws.com/crowd-2018-assets/extras/bimba/7.jpg");
+    background-size: cover;
 }
 
 #cube {
